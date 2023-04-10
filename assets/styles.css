@@ -3,12 +3,13 @@
     padding: 0;
 
 }
+
 .header {
     font-family: 'Product Sans', sans-serif;
-    max-width: 90%;
+    max-width: 100vw;
     height: 5rem;
     margin: 0 auto;
-    background: lightgray;
+    background: white;
     display: grid;
     grid-auto-flow: column;
     grid-template-columns: 1fr 3fr;
@@ -20,7 +21,9 @@
     align-items: center;
     padding-left: 12%;
 }
-
+.brand img{
+    width: 100px;
+}
 .brand h1{
     color: #6d7eb3;
     font-size: 2em;
@@ -41,9 +44,10 @@
     color: black;
     text-decoration: none;
     margin: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
+    font-size: 1.1rem;
+    font-weight: 600;
     transition: 0.1s;
+    margin: 0 40px 0 40px;
 }
 
 .first a:hover{
@@ -109,6 +113,135 @@
     width: 28px;
 }
 
+body{
+   position: relative;
+   z-index: -5;
+}
+
+.container{
+    font-family: 'Product Sans', sans-serif;
+    position: relative;
+    height: 70vh;
+    /* background: linear-gradient(135deg, #f588a0 1%, #6d7eb3 40%); */
+    background: #28282B;
+    border-radius: 0 0 1000px 0;
+    z-index: -3;
+} 
+
+.container h1{
+    font-weight: bold;
+    font-size: 4rem;
+    padding: 8vw 0 0 11vw;
+    z-index: -2;
+    color: white;
+}
+
+.container p {
+    font-size: 1.5rem;
+    padding: 20px 0 0 11vw;
+    color: white;
+}
+.button{
+    font-family: 'Product Sans', sans-serif;
+    font-weight: bold;
+    margin: 40px 0 0 11vw;
+    background-color: #f588a0;
+    border: none;
+    border-radius: 100px;
+    color: #28282B;
+    padding: 20px 37px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+.hero{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    min-height: 70vh;
+}
+
+.heroimg{
+    width: 92%;
+    height: 101%;
+    background-image: url(./images/dboard.png);
+    background-repeat: no-repeat;
+    background-position: right;
+}
+
+.content{
+    font-family: 'Product Sans', sans-serif;
+    height: 50vh;
+}
+
+.content h3{
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 5vw;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+footer{
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #111;
+    height: auto;
+    /* width: 100vw; */
+    padding-top: 40px;
+    color: #fff;
+}
+.footer {
+    font-family: 'Product Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.footer p {
+    max-width: 500px;
+    line-height: 28px;
+    font-size: 15px;
+}
+.email{
+    margin: 20px 0 50px 0;
+}
+.line{
+    height: 1px;
+    background: white;
+    width: 150px;
+    margin-top: 20px;
+}
+.socials {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3em 0 2rem 0;
+}
+.socials li {
+    margin: 0 10px;
+}
+.socials a {
+    text-decoration: none;
+    color: #fff;
+}
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+
+}
+.socials a:hover i {
+    color: #f588a0;
+}
+
 @media(max-width:992px){
     .first a{
         font-size: 1rem;
@@ -117,17 +250,22 @@
         font-size: 2em;
     }
 }
+@media(max-width:975px){
+    .heroimg{
+        display: none;
+    }
+    .hero{
+        grid-template-columns: 85% 15%;
+    }
+}
 
 @media(max-width:768px){
-    body{
-        background: #f7f7f7;
-    }
     .header{
         grid-template-columns: 4fr 0.5fr;
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
     .brand{
-        justify-content: flex-start;
+        justify-content: center;
         padding-left: 12%;
     }
     .burgerContainer{
@@ -137,10 +275,10 @@
     }
     .menuContainer{
         position: absolute;
-        width: 90%;
+        width: 100vw;
         height: fit-content;
         margin: 0 auto;
-        padding: 30px 0 30px 0;
+        padding: 50px 0 30px 0;
         box-sizing: border-box;
         background: white;
         justify-content: flex-start;
@@ -159,10 +297,22 @@
         justify-content: center;
         flex-direction: column;
     }
+    .first a{
+        padding-bottom: 10px;
+    }
+    .container h1{
+        font-size: 3rem;
+    }
 }
 
 @media(max-width: 567px){
     .brand{
         justify-content: center;
+    }
+    .container h1{
+        font-size: 2rem;
+    }
+    .container p{
+        font-size: 1rem;
     }
 }

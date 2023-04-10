@@ -7,3 +7,8 @@ document.querySelector(".ham").addEventListener("click", function(){
 function burgerclick(){
     document.querySelector(".menuContainer").classList.toggle("show");
 }
+
+window.addEventListener('click' , (e) => {
+    const target = e.target.className; 
+    console.log(target);
+})
