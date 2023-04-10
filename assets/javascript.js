@@ -8,6 +8,7 @@ function burgerclick(){
     document.querySelector(".menuContainer").classList.toggle("show");
 }
 
+// BUG/ERROR TESTER
 window.addEventListener('click' , (e) => {
     const target = e.target.className; 
     console.log(target);
