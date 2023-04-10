@@ -141,6 +141,7 @@ body{
     padding: 20px 0 0 11vw;
     color: white;
 }
+
 .button{
     font-family: 'Product Sans', sans-serif;
     font-weight: bold;
@@ -156,7 +157,6 @@ body{
     cursor: pointer;
 }
 
-
 .hero{
     display: grid;
     grid-template-columns: 50% 50%;
@@ -171,18 +171,69 @@ body{
     background-position: right;
 }
 
-.content{
+.hook{
     font-family: 'Product Sans', sans-serif;
-    height: 50vh;
-}
-
-.content h3{
-    font-size: 3rem;
-    font-weight: bold;
-    margin-top: 5vw;
+    height: 15vh;
+    display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
     text-align: center;
+    margin-top: 4vw;
+}
+
+.hook h3{
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.line2{
+    height: 2px;
+    background: black;
+    width: 300px;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.content {
+    font-family: 'Product Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    margin: 60px 11vw 60px 11vw;
+    text-align: center;
+}
+
+.grid1{
+    /* display: flex; */
+    /* justify-content: center;    */
+    /* flex-direction: column; */
+}
+.grid2{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+}
+.grid3{
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+}
+
+.content h4{
+    font-size: 1.75rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+}
+
+.content p{
+    font-size: 1.25rem;
+    margin: 0 50px 0 50px;
+    line-height: 25px;
+}
+.content img{
+    width: 22vw;
 }
 
 footer{
@@ -219,6 +270,7 @@ footer{
     width: 150px;
     margin-top: 20px;
 }
+
 .socials {
     list-style: none;
     display: flex;
