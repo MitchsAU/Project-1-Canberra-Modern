@@ -144,8 +144,57 @@ body{
 
 .container p {
     font-size: 1.5rem;
-    padding: 20px 0 0 11vw;
+    padding: 20px 0 60px 11vw;
     color: white;
+}
+
+.contact{
+    font-family: 'Product Sans', sans-serif;
+    background: #28282B;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.contact h3{
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    padding: 100px 0 30px 0;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    padding: 2vw 4vw;
+    width: 90%;
+    max-width: 600px;
+    border-radius: 10px;
+}
+
+form input, textarea{
+    border: 0;
+    margin: 10px 0;
+    padding: 20px;
+    outline: none;
+    background: white;
+    font-size: 16px;
+}
+
+form button{
+    padding: 15px;
+    background: #f588a0;
+    color: #28282B;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    font-weight: bold;
+    width: 150px;
+    margin: 20px auto 100px;
+    border-radius: 30px;
 }
 
 .button{
@@ -161,6 +210,25 @@ body{
     text-decoration: none;
     font-size: 16px;
     cursor: pointer;
+}
+
+.partnerbutton{
+    font-family: 'Product Sans', sans-serif;
+    font-weight: bold;
+    /* margin: 0 0 30px 0; */
+    background-color: #f588a0;
+    border: none;
+    border-radius: 100px;
+    color: #28282B;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.partnerbutton:hover{
+    background-color: #6d7eb3;
 }
 
 .hero{
@@ -187,9 +255,7 @@ body{
     text-align: center;
     margin-top: 4vw;
 }
-/* #hookcm{
-    margin-top: 5vw;
-} */
+
 .hook h3{
     font-size: 3rem;
     font-weight: bold;
@@ -199,11 +265,6 @@ body{
     font-size: 1.75rem;
     padding-top: 20px;
 }
-
-/* .hook p{
-    font-size: 1.25rem;
-    margin: 20px 20vw 20px 20vw;
-} */
 
 .line2{
     height: 2px;
@@ -243,6 +304,10 @@ body{
     width: 22vw;
 }
 
+.partnergrid{
+    padding-top: 70px;
+}
+
 /* GALLERY */
 .gallery{
     z-index: -5;
@@ -279,8 +344,52 @@ body{
     grid-template-columns: 1fr 1fr;
     margin: 0 20vw 0 20vw;
 }
+
+/* CANBERRA'S MODERN */
 .section{
-    height: 80vh;
+    position: relative;
+    z-index: -5;
+    font-family: 'Product Sans', sans-serif;
+}
+
+#hookcm{
+    margin-top: 1vw;
+    padding-top: 50px;
+}
+
+.section p{
+    font-size: 1.25rem;
+    margin: 20px 30vw 20px 30vw;
+}
+
+.cmgrid{
+    font-family: 'Product Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5vw 20vw 5vw 20vw;
+}
+.cmgrid img{
+    width: 25vw;
+    margin-top: 2.5vw;
+}
+.cmgrid .inner h4{
+    margin-top: 2.5vw;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+.cmgrid .inner h5{
+    margin-top: 1.5vw;
+    font-size: 1.25rem;
+}
+.cmgrid p{
+    margin-top: 1.5vw;
+    font-size: 1.1rem;
+    font-style: italic;
+}
+.cmgrid .inner h6{
+    margin-top: 1.5vw;
+    font-size: 1.25rem;
+    color: rgb(172, 26, 26);
 }
 footer{
     /* position: absolute; */
@@ -346,6 +455,10 @@ footer{
     .grids img{
         width: 30vw;
     }
+    .section p{
+        font-size: 1.25rem;
+        margin: 20px 20vw 20px 20vw;
+    }
 }
 @media(max-width:992px){
     .first a{
@@ -353,6 +466,12 @@ footer{
     }
     .brand h1{
         font-size: 2em;
+    }
+    .cmgrid{
+        grid-template-columns: 1fr;
+    }
+    .cmgrid img{
+        width: 55vw;
     }
 }
 @media(max-width:975px){
@@ -449,5 +568,30 @@ footer{
     }
     .credits{
         font-size: 1rem;
+    }
+    .section p{
+        font-size: 1.1rem;
+        margin: 30px 15vw 20px 15vw;
+    }
+    .cmgrid .inner h4{
+        font-size: 1.25rem;
+    }
+    .cmgrid .inner h5{
+        font-size: 1.1rem;
+    }
+    .cmgrid p{
+        font-size: 1rem;
+    }
+    .cmgrid .inner h6{
+        font-size: 1.1rem;
+    }
+}
+@media(max-width: 400px){
+    .section p{
+        font-size: 1.1rem;
+        margin: 90px 10vw 20px 10vw;
+    }
+    .hook h3{
+       margin-top: 50px;
     }
 }
