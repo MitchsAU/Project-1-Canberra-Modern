@@ -230,6 +230,24 @@ form button{
 .partnerbutton:hover{
     background-color: #6d7eb3;
 }
+/* 
+.eventbutton{
+    font-family: 'Product Sans', sans-serif;
+    font-weight: bold;
+    margin: 0 0 30px 0;
+    background-color: #f588a0;
+    border: none;
+    border-radius: 100px;
+    color: #28282B;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+}
+.eventbutton:hover{
+    background-color: #6d7eb3;
+} */
 
 .hero{
     display: grid;
@@ -391,6 +409,49 @@ form button{
     font-size: 1.25rem;
     color: rgb(172, 26, 26);
 }
+
+/* EVENTS */
+
+.eventcontent {
+    font-family: 'Product Sans', sans-serif;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    margin: 60px 11vw 60px 11vw;
+    text-align: center;
+}
+
+.eventcontent h4{
+    font-size: 1.5rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 0 4.5vw;
+    max-width: 30vw;
+}
+
+.eventcontent h5{
+    font-size: 1.25rem;
+    padding-top: 20px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    text-align: left;
+    margin: 0 0 0 4.5vw;
+}
+
+.eventcontent p{
+    font-size: 1.25rem;
+    margin: 0 50px 0 4.5vw;
+    line-height: 25px;
+    padding-bottom: 30px;
+    text-align: left;
+    max-width: 30vw;
+}
+.eventcontent img{
+    width: 30vw;
+}
+
 footer{
     /* position: absolute; */
     bottom: 0;
@@ -548,6 +609,23 @@ footer{
     .container h1{
         font-size: 3rem;
     }
+
+    .eventcontent {
+        grid-template-columns: 1fr;
+    }
+    
+    .eventcontent h4{
+        max-width: 70vw;
+    }
+    
+    .eventcontent p{
+        max-width: 70vw;
+    }
+    
+    .eventcontent img{
+        width: 70vw;
+    }
+    
 }
 
 @media(max-width: 567px){
