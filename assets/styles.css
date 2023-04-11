@@ -621,11 +621,10 @@ footer{
     .eventcontent p{
         max-width: 70vw;
     }
-    
+
     .eventcontent img{
         width: 70vw;
     }
-    
 }
 
 @media(max-width: 567px){
