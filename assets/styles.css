@@ -4,7 +4,7 @@
 
 }
 
-.header {
+.header { /*Styling the basics for the header, this is positioning the logo to the left and the text to the right with the grid system as 1fr and 3fr*/
     font-family: 'Product Sans', sans-serif;
     max-width: 100vw;
     height: 5rem;
@@ -15,32 +15,23 @@
     grid-template-columns: 1fr 3fr;
     grid-template-rows: 100%;
 }
-.brand{
+.brand{ /*The brand is the canberra modern logo, this is making it so the logo in centered within its grid template*/
     display: flex;
     justify-content: center;
     align-items: center;
     padding-left: 12%;
 }
-.brand img{
+.brand img{ /*Classifying the size of the logo*/
     width: 100px;
 }
-.brand h1{
-    color: #6d7eb3;
-    font-size: 2em;
-    font-weight: bolder;
-}
 
-.brand span{
-    color: #f588a0;
-}
-
-.menuContainer{
+.menuContainer{ /*This is centering the header text in their grid*/
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.first a{
+.first a{ /*This is styling the header text*/
     color: black;
     text-decoration: none;
     margin: 10px;
@@ -50,11 +41,11 @@
     margin: 0 40px 0 40px;
 }
 
-.first a:hover{
+.first a:hover{ /*When hovering it changed to one of the CM logo colours*/
     color: #6d7eb3;
 }
 
-.burgerContainer{
+.burgerContainer{ /*This is setting the hamburger as none so that on larger screen (desktop usually) the menu isnt visible, this changed later on in the @media*/
     display: none;
 }
 
@@ -70,11 +61,11 @@
     transform: scale(1);
 }
 
-.ham:hover{
+.ham:hover{ /*This is creating a shadow around the hamburger menu*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
-.bur{
+.bur{ /*Styling the lines on the hamburger menu*/
     width: 20px;
     height: 20px;
     display: flex;
@@ -82,14 +73,14 @@
     flex-direction: column;
 }
 
-.ger{
+.ger{ /*Styling the lines on the hamburger menu*/
     width: 20px;
     height: 3px;
     border-radius: 3px;
     background: rgb(109, 109, 109);
     transition: 0.5s ease-in-out;
 }
-
+/* The following classes are to help with the javascript animation of changing the 3 lines into an X, this is done buy transforming the lines into a different position on the site */
 .q{
     transform-origin: 0 0;
 }
@@ -113,28 +104,30 @@
     width: 28px;
 }
 
-#underline{
+#underline{ /*This is setting the underline on the page that your are on. E.g. On Events page it will be underlined in the header*/
     text-decoration:underline;
     text-decoration-thickness: 2.5px;
     text-underline-offset: 6px;
 }
 
-body{
+/*INDEX*/
+
+body{ /*Setting the z-index as it was interfering with other classes*/
    position: relative;
    z-index: -5;
 }
 
-.container{
+.container{ /*This is the hero container on the index page*/
     font-family: 'Product Sans', sans-serif;
     position: relative;
     height: 70vh;
-    /* background: linear-gradient(135deg, #f588a0 1%, #6d7eb3 40%); */
     background: #28282B;
-    border-radius: 0 0 1000px 0;
+    border-radius: 0 0 1000px 0; /*This is creating the radius in the bottom right, i made his descision as it helps the website flow into the content below it rather than just have a boring rectangle.
+    This also was aligned with the CM diving board as the board had a similar curve thaty integrated nicley*/
     z-index: -3;
 } 
 
-.container h1{
+.container h1{ /*Styling their motto*/
     font-weight: bold;
     font-size: 4rem;
     padding: 8vw 0 0 11vw;
@@ -142,13 +135,13 @@ body{
     color: white;
 }
 
-.container p {
+.container p { /*Text beneath motto*/
     font-size: 1.5rem;
     padding: 20px 0 60px 11vw;
     color: white;
 }
 
-.contact{
+.contact{ /*Creating the contact form section*/
     font-family: 'Product Sans', sans-serif;
     background: #28282B;
     text-align: center;
@@ -165,7 +158,7 @@ body{
     padding: 100px 0 30px 0;
 }
 
-form{
+form{ /*Aligning the form*/
     display: flex;
     flex-direction: column;
     padding: 2vw 4vw;
@@ -174,7 +167,7 @@ form{
     border-radius: 10px;
 }
 
-form input, textarea{
+form input, textarea{ /*Styling the input and text boxes*/
     border: 0;
     margin: 10px 0;
     padding: 20px;
@@ -183,7 +176,7 @@ form input, textarea{
     font-size: 16px;
 }
 
-form button{
+form button{ /*Styling the button to send the form*/
     padding: 15px;
     background: #f588a0;
     color: #28282B;
@@ -197,7 +190,7 @@ form button{
     border-radius: 30px;
 }
 
-.button{
+.button{ /*this is the call to action button on the index page beneath the motto and paragraph*/
     font-family: 'Product Sans', sans-serif;
     font-weight: bold;
     margin: 40px 0 0 11vw;
@@ -209,13 +202,12 @@ form button{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer; /*Letting the user know its clickable*/
 }
 
-.partnerbutton{
+.partnerbutton{ /*Styling the partner button on the partner page to give users access to their websites*/
     font-family: 'Product Sans', sans-serif;
     font-weight: bold;
-    /* margin: 0 0 30px 0; */
     background-color: #f588a0;
     border: none;
     border-radius: 100px;
@@ -224,38 +216,20 @@ form button{
     text-align: center;
     text-decoration: none;
     font-size: 16px;
-    cursor: pointer;
+    cursor: pointer; /*Letting the user know its clickable*/
 }
 
-.partnerbutton:hover{
+.partnerbutton:hover{ /*Changing colour on hover letting the user know that it is clickable*/
     background-color: #6d7eb3;
 }
-/* 
-.eventbutton{
-    font-family: 'Product Sans', sans-serif;
-    font-weight: bold;
-    margin: 0 0 30px 0;
-    background-color: #f588a0;
-    border: none;
-    border-radius: 100px;
-    color: #28282B;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 16px;
-    cursor: pointer;
-}
-.eventbutton:hover{
-    background-color: #6d7eb3;
-} */
-
-.hero{
+ 
+.hero{ /*This is the grid for the hero*/
     display: grid;
     grid-template-columns: 50% 50%;
     min-height: 70vh;
 }
 
-.heroimg{
+.heroimg{ /*Setting the diving board in place, and aligning it with the curve*/
     width: 92%;
     height: 101%;
     background-image: url(./images/dboard.png);
@@ -263,7 +237,7 @@ form button{
     background-position: right;
 }
 
-.hook{
+.hook{ /*Styling the title of pages*/
     font-family: 'Product Sans', sans-serif;
     height: 15vh;
     display: flex;
@@ -284,19 +258,19 @@ form button{
     padding-top: 20px;
 }
 
-.line2{
+.line2{ /*This is creating a line beneath titles to give it a seperation*/
     height: 2px;
     background: black;
     width: 300px;
     margin-top: 30px;
     text-align: center;
 }
-.gallery p{
+/* .gallery p{
     font-family: 'Product Sans', sans-serif;
     font-size: 1.25rem;
     margin: 20px 20vw 20px 20vw;
-}
-.content {
+} */
+.content { /*The grid system for about canberra modern*/
     font-family: 'Product Sans', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -318,7 +292,7 @@ form button{
     line-height: 25px;
     padding-bottom: 30px;
 }
-.content img{
+.content img{ /*Setting the image size*/
     width: 22vw;
 }
 
@@ -327,6 +301,7 @@ form button{
 }
 
 /* GALLERY */
+
 .gallery{
     z-index: -5;
     position: relative;
@@ -340,11 +315,12 @@ form button{
     align-items: center;
 }
 
-.grids img{
+.grids img{ /*Setting the size of the images in the gallery*/
     width: 23vw;
     padding: 10px;
 }
 
+/*Styling the image credits below the images*/
 .credits{
     font-family: 'Product Sans', sans-serif;
     font-size: 1.5rem;
@@ -364,32 +340,34 @@ form button{
 }
 
 /* CANBERRA'S MODERN */
+
 .section{
     position: relative;
     z-index: -5;
     font-family: 'Product Sans', sans-serif;
 }
 
-#hookcm{
+#hookcm{ /*Adding extra padding and margin*/
     margin-top: 1vw;
     padding-top: 50px;
 }
 
-.section p{
+.section p{ /*Text below subtitle*/
     font-size: 1.25rem;
     margin: 20px 30vw 20px 30vw;
 }
 
-.cmgrid{
+.cmgrid{ /*Setting the grid system for the CM page*/
     font-family: 'Product Sans', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 5vw 20vw 5vw 20vw;
 }
-.cmgrid img{
+.cmgrid img{ /*setting the image sizes*/
     width: 25vw;
     margin-top: 2.5vw;
 }
+/*Simple text styling for CM*/
 .cmgrid .inner h4{
     margin-top: 2.5vw;
     font-size: 1.5rem;
@@ -407,12 +385,12 @@ form button{
 .cmgrid .inner h6{
     margin-top: 1.5vw;
     font-size: 1.25rem;
-    color: rgb(172, 26, 26);
+    color: rgb(172, 26, 26); /*making the 'AT RISK' in red so its stands out more to the user*/
 }
 
 /* EVENTS */
 
-.eventcontent {
+.eventcontent { /*The grid system for the events page*/
     font-family: 'Product Sans', sans-serif;
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -421,6 +399,7 @@ form button{
     text-align: center;
 }
 
+/*Simple styling for the text*/
 .eventcontent h4{
     font-size: 1.5rem;
     padding-top: 20px;
@@ -448,22 +427,24 @@ form button{
     text-align: left;
     max-width: 30vw;
 }
+
+/*Setting the image size*/
 .eventcontent img{
     width: 30vw;
 }
 
-footer{
-    /* position: absolute; */
+/*FOOTER*/
+
+footer{ /*Styling the footer*/
     bottom: 0;
     left: 0;
     right: 0;
     background: #111;
     height: auto;
-    /* width: 100vw; */
     padding-top: 40px;
     color: #fff;
 }
-.footer {
+.footer { /*Styling the footer*/
     font-family: 'Product Sans', sans-serif;
     display: flex;
     align-items: center;
@@ -472,6 +453,7 @@ footer{
     text-align: center;
 }
 
+/*Simple text styling for the footer*/
 .footer p {
     max-width: 500px;
     line-height: 28px;
@@ -487,6 +469,7 @@ footer{
     margin-top: 20px;
 }
 
+/*This is the small social icons on the top of the footer*/
 .socials {
     list-style: none;
     display: flex;
@@ -506,12 +489,15 @@ footer{
     transition: color .4s ease;
 
 }
-.socials a:hover i {
+.socials a:hover i { /*Added a hover affect to on of the CM colours*/
     color: #f588a0;
 }
+
+/*MEDIA QUERIES*/
+/*Most of these media queries are just adjusting sizing of TEXT, IMAGES and GRIDS for smaller screens*/
 @media(max-width:1200px){
     .grids{
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr; /*Changing grid size for smaller screens*/
     }
     .grids img{
         width: 30vw;
@@ -529,7 +515,7 @@ footer{
         font-size: 2em;
     }
     .cmgrid{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /*Changing grid size for smaller screens*/
     }
     .cmgrid img{
         width: 55vw;
@@ -537,7 +523,7 @@ footer{
 }
 @media(max-width:975px){
     .heroimg{
-        display: none;
+        display: none; /*This takes away the diving board from the index page on smaller screen so the user can have better readability for the text next to it*/
     }
     .hero{
         grid-template-columns: 85% 15%;
@@ -546,28 +532,13 @@ footer{
         width: 300px;
     }
     .content {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media(max-width:840px){
-    .content img{
-        width: 400px;
-    }
-    .content {
-        grid-template-columns: 1fr;
-    }
-    .grids{
-        grid-template-columns: 1fr 1fr;
-    }
-    .grids img{
-        width: 40vw;
+        grid-template-columns: 1fr 1fr; /*Changing grid size for smaller screens*/
     }
 }
 
 @media(max-width:840px){
     .header{
-        grid-template-columns: 4fr 0.5fr;
+        grid-template-columns: 4fr 0.5fr; /*Changing grid size for smaller screens*/
         box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
     }
     .brand{
@@ -579,7 +550,7 @@ footer{
         justify-content: center;
         align-items: center;
     }
-    .menuContainer{
+    .menuContainer{ /*Adjusting the header*/
         position: absolute;
         width: 100vw;
         height: fit-content;
@@ -611,7 +582,7 @@ footer{
     }
 
     .eventcontent {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /*Changing grid size for smaller screens*/
     }
     
     .eventcontent h4{
@@ -624,6 +595,18 @@ footer{
 
     .eventcontent img{
         width: 70vw;
+    }
+    .content img{
+        width: 400px;
+    }
+    .content {
+        grid-template-columns: 1fr; /*Changing grid size for smaller screens*/
+    }
+    .grids{
+        grid-template-columns: 1fr 1fr; /*Changing grid size for smaller screens*/
+    }
+    .grids img{
+        width: 40vw;
     }
 }
 
@@ -638,7 +621,7 @@ footer{
         font-size: 1rem;
     }
     .grids{
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr; /*Changing grid size for smaller screens*/
     }
     .grids img{
         width: 80vw;
@@ -663,6 +646,7 @@ footer{
         font-size: 1.1rem;
     }
 }
+
 @media(max-width: 400px){
     .section p{
         font-size: 1.1rem;
